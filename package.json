@@ -1,0 +1,16 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Simple project for learning how to use typescript.",
+  "main": "index.js",
+  "scripts": {
+    "firstscript": "node dist/first.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}
