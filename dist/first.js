@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 //Basic types
 let id = 5;
 let company = 'Learner';
@@ -28,6 +29,7 @@ const user1 = {
     id: 1,
     name: "twilo"
 };
+console.log((_a = user1.usertype) === null || _a === void 0 ? void 0 : _a.toUpperCase());
 const add = (x, y) => x + y;
 const sub = (x, y) => x - y;
 class Person {
@@ -80,3 +82,13 @@ const validateUser = (user) => {
     // happen, which matches the return type of neverReturns.
     return neverReturns();
 };
+const req = { url: "https://example.com", method: "GET" };
+// The as const suffix acts like const but for the type system, 
+// ensuring that all properties are assigned the literal 
+// type instead of a more general version like string or number
+function liveDangerously(x) {
+    // No error
+    console.log(x.toFixed());
+    // Writing ! after any expression is effectively a 
+    // type assertion that the value isn’t null or undefined  
+}

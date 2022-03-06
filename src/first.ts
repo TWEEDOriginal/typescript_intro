@@ -45,6 +45,7 @@ function log(message: string|number): void {   // takes in a message returns not
 interface UserInterface {
     readonly id: number  //makes this readonly you can't change the value once it is set
     name: string
+    usertype?: string
     age?: number // this makes age property optional
 }
 
@@ -59,6 +60,7 @@ const user1: UserInterface = {
     id: 1,
     name: "twilo"
 }
+console.log(user1.usertype?.toUpperCase());
 
 type Point = number | Boolean // you can't use an interface with union
 
@@ -151,3 +153,18 @@ const neverReturns = () => {
     return neverReturns();
   };
   
+
+const req = { url: "https://example.com", method: "GET" } as const;
+
+// The as const suffix acts like const but for the type system, 
+// ensuring that all properties are assigned the literal 
+// type instead of a more general version like string or number
+
+
+function liveDangerously(x?: number | null) {
+    // No error
+    console.log(x!.toFixed());
+    // Writing ! after any expression is effectively a 
+    // type assertion that the value isn’t null or undefined  
+  }
+
