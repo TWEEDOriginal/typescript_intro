@@ -28,18 +28,18 @@
         `Windows`
         
         ```sh
-        $ tsc | npm run firstscript
+        $ tsc | npm run $npm_script #npm_script in package.json
         ```
 
         `Linux or MacOS`
         
         ```sh
-        $ tsc  && node dist/first.js
+        $ tsc  && node $outDir/$js_script
         ```
 
     - Run using typescript:
 
         ```sh
-        $ ts-node src/first.ts
+        $ ts-node $rootDir/$ts_script
         ```
         

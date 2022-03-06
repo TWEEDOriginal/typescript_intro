@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "firstscript": "node dist/first.js",
+    "libraryscript": "node dist/library.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
